@@ -1,0 +1,92 @@
+<!doctype html>
+<html lang="es">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover" />
+  <meta name="theme-color" content="#07111f" />
+  <title>SwimBack Tracker</title>
+  <link rel="manifest" href="manifest.json" />
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <div class="app-shell">
+    <header class="topbar">
+      <div>
+        <p class="eyebrow">SwimBack Tracker</p>
+        <h1>Descanso, natación y gimnasio</h1>
+      </div>
+      <div class="status-pill" id="generalStatus">OK</div>
+    </header>
+
+    <nav class="tabs" aria-label="Secciones">
+      <button class="tab active" data-section="dashboard">Dashboard</button>
+      <button class="tab" data-section="rest">Descanso</button>
+      <button class="tab" data-section="swim">Natación</button>
+      <button class="tab" data-section="gym">Gimnasio</button>
+      <button class="tab" data-section="backup">Datos</button>
+    </nav>
+
+    <main>
+      <section id="dashboard" class="section active">
+        <div class="hero-card">
+          <div>
+            <p class="eyebrow">Estado general</p>
+            <h2 id="dashboardStatus">OK</h2>
+            <p id="statusReason">Carga estable según tus últimos registros.</p>
+          </div>
+          <div class="score-ring" id="readinessScore">100</div>
+        </div>
+        <div class="metric-grid" id="metricGrid"></div>
+      </section>
+
+      <section id="rest" class="section">
+        <div class="section-head">
+          <h2>Descanso</h2>
+          <p>Registrá sueño, energía y señales de recuperación.</p>
+        </div>
+        <form id="restForm" class="card-form"></form>
+        <div class="records" id="restRecords"></div>
+      </section>
+
+      <section id="swim" class="section">
+        <div class="section-head">
+          <h2>Natación</h2>
+          <p>Seguimiento de volumen, técnica, RPE y hombro.</p>
+        </div>
+        <form id="swimForm" class="card-form"></form>
+        <div class="records" id="swimRecords"></div>
+      </section>
+
+      <section id="gym" class="section">
+        <div class="section-head">
+          <h2>Gimnasio</h2>
+          <p>Carga estimada, foco del día y fatiga post entrenamiento.</p>
+        </div>
+        <form id="gymForm" class="card-form"></form>
+        <div class="records" id="gymRecords"></div>
+      </section>
+
+      <section id="backup" class="section">
+        <div class="section-head">
+          <h2>Datos / Backup</h2>
+          <p>Exportá, importá o copiá tus registros para Google Sheets.</p>
+        </div>
+        <div class="backup-grid">
+          <button id="exportJson" class="primary">Exportar JSON</button>
+          <label class="file-button">Importar JSON<input id="importJson" type="file" accept="application/json" /></label>
+          <button id="exportRestCsv">CSV descanso</button>
+          <button id="exportSwimCsv">CSV natación</button>
+          <button id="exportGymCsv">CSV gimnasio</button>
+          <button id="exportAllCsv">CSV consolidado</button>
+          <button id="copySheets">Copiar tabla Google Sheets</button>
+          <button id="syncSheets" disabled>Sincronizar con Google Sheets</button>
+          <button id="clearAll" class="danger">Limpiar todos los datos</button>
+        </div>
+        <textarea id="backupOutput" placeholder="Acá aparecerán datos copiados o mensajes del sistema." readonly></textarea>
+      </section>
+    </main>
+  </div>
+
+  <script src="app.js"></script>
+</body>
+</html>
