@@ -1,0 +1,24 @@
+{
+  "expo": {
+    "name": "SwimApp",
+    "slug": "swimapp",
+    "version": "0.1.0",
+    "orientation": "portrait",
+    "userInterfaceStyle": "dark",
+    "newArchEnabled": true,
+    "scheme": "swimapp",
+    "platforms": ["ios", "android", "web"],
+    "ios": {
+      "supportsTablet": true,
+      "bundleIdentifier": "com.moralespablomp.swimapp"
+    },
+    "android": {
+      "package": "com.moralespablomp.swimapp"
+    },
+    "web": {
+      "bundler": "metro",
+      "output": "single",
+      "name": "SwimApp"
+    }
+  }
+}
