@@ -4,7 +4,7 @@
     "slug": "swimapp",
     "version": "0.1.0",
     "orientation": "portrait",
-    "userInterfaceStyle": "dark",
+    "userInterfaceStyle": "light",
     "newArchEnabled": true,
     "scheme": "swimapp",
     "platforms": ["ios", "android", "web"],
