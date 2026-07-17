@@ -4,7 +4,7 @@
 
 Este documento define la estructura funcional, el alcance general y las etapas de desarrollo de SwimApp.
 
-La aplicación toma como referencia conceptual plataformas integrales de gestión de natación como DigitAquos, pero su implementación, diseño, textos, marca, experiencia de uso y código serán propios.
+La aplicación toma como referencia conceptual plataformas integrales de gestión de natación, pero su implementación, diseño, textos, marca, experiencia de uso y código serán propios.
 
 La estrategia será construir el producto por módulos, validando cada etapa antes de avanzar. El objetivo no es desarrollar desde el inicio una plataforma completa, sino crear primero un recorrido funcional y útil para entrenadores y nadadores.
 
